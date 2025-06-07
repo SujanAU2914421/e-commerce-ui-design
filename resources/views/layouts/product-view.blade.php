@@ -50,18 +50,27 @@
             <div class="relative flex-grow w-full">
                 <div class="relative w-full xl:px-16 lg:px-8 md:px-4 px-2 mb-16 min-h-screen pt-8">
                     <div class="relative h-auto w-full flex">
-                        {{-- product details --}}
                         <div class="relative w-1/2 min-h-screen">
                             <div
                                 class="relative h-[calc(100vh-8rem)] w-full rounded-xl border-gray-300 border overflow-hidden">
                                 <div class="relative h-full w-full"
-                                    style="background: url({{ $product['image'] }}) center / cover">
+                                    style="background: url('{{ $product['image'] }}') center / cover">
                                 </div>
                             </div>
+
                             <div class="relative mt-5 flex gap-8 flex-wrap">
-                                <div class="relative h-32 w-32 rounded-md bg-gray-200 border-gray-800 border"></div>
+                                @if (!empty($product['images']))
+                                    @foreach ($product['images'] as $image)
+                                        <div
+                                            class="relative h-32 w-32 rounded-md bg-gray-200 border-gray-800 border overflow-hidden">
+                                            <img src="{{ $image }}" alt="Product Image"
+                                                class="h-full w-full object-cover" />
+                                        </div>
+                                    @endforeach
+                                @endif
                             </div>
                         </div>
+
                         <div class="relative w-1/2 xl:pl-16 lg:pl-8 md:pl-4 px-2">
                             <div class="relative">
                                 <div class="relative text-3xl font-extrabold">
@@ -99,7 +108,7 @@
                             </div>
                             <div class="relative mt-8 flex items-center gap-4 flex-wrap">
                                 <div
-                                    class="relative h-10 w-1/2 px-8 gap-4 shadow text-sm rounded-sm cursor-pointer bg-gray-800 text-white hover:bg-black duration-200 font-bold flex items-center justify-center">
+                                    class="relative h-10 w-1/2 px-8 gap-4 shadow text-sm rounded-lg cursor-pointer bg-gray-800 text-white hover:bg-black duration-200 font-bold flex items-center justify-center">
                                     <div class="">Add to Cart</div>
                                     <div class="relative">
                                         <svg width="17" height="17" viewBox="0 0 24 24" fill="none"
@@ -113,7 +122,7 @@
                                     </div>
                                 </div>
                                 <div
-                                    class="relative h-10 w-auto px-8 gap-4 text-sm shadow rounded-sm cursor-pointer {{ $product['is_favorite'] ? 'bg-orange-500 text-white hover:bg-orange-600' : 'bg-white hover:bg-orange-500 text-orange-600 hover:text-white border border-orange-600 hover:border-orange-500' }} duration-200 font-bold flex items-center justify-center">
+                                    class="relative h-10 w-auto px-8 gap-4 text-sm shadow rounded-lg cursor-pointer {{ $product['is_favorite'] ? 'bg-orange-500 text-white hover:bg-orange-600' : 'bg-white hover:bg-orange-500 text-orange-600 hover:text-white border border-orange-600 hover:border-orange-500' }} duration-200 font-bold flex items-center justify-center">
                                     <div class="">
                                         {{ $product['is_favorite'] ? 'Added to your wishlist' : 'Add to you wishlist' }}
                                     </div>

@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between text-sm">
 
         <div>
-            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">FigPic</h3>
+            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Eats</h3>
             <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
                 Your one-stop shop for all things tasty, trendy, and techy.
             </p>
@@ -13,7 +13,7 @@
             <div class="min-w-[150px]">
                 <h4 class="text-md font-semibold mb-4 text-gray-800 dark:text-white">Company</h4>
                 <ul class="space-y-2">
-                    <li><a href="/about" class="hover:text-yellow-500 transition">About us</a></li>
+                    <li><a href="/about-us" class="hover:text-yellow-500 transition">About us</a></li>
                     <li><a href="/#" class="hover:text-yellow-500 transition">Blog</a></li>
                     <li><a href="/#" class="hover:text-yellow-500 transition">Career</a></li>
                 </ul>

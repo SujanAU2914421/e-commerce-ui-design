@@ -1,15 +1,10 @@
-@php
-    $products = include resource_path('data/products-array.blade.php');
-@endphp
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Laravel</title>
+    <title>Privacy Policy - FigPic</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net" />
@@ -26,85 +21,97 @@
         {{-- navbar --}}
         <x-navbar />
 
-        {{-- contents --}}
         <div class="relative flex-grow w-full">
             <div class="relative w-full xl:px-16 lg:px-8 md:px-4 px-2 mb-16">
-                <section class="max-w-4xl mx-auto mt-12 mb-20 text-gray-800">
-                    <h1 class="text-3xl font-semibold mb-6">Privacy Policy</h1>
-                    <div class="mt-2 text-sm text-gray-700">
-                        This Privacy Policy explains how we collect, use, disclose, and safeguard your information when
-                        you visit our website. By using our site, you agree to the practices described in this policy.
+                <section class="w-full xl:px-16 lg:px-8 md:px-4 px-2 mt-12 mb-20 text-gray-800">
+                    <div class="text-3xl font-semibold text-center mb-14">Privacy Policy</div>
+
+                    {{-- Section 1 --}}
+                    <div class="relative mt-8 flex flex-col md:flex-row items-center gap-6">
+                        <div class="relative w-full md:w-1/2 pr-0 md:pr-16">
+                            <div class="text-4xl font-bold mt-6">Information We Collect</div>
+                            <div class="mt-4 text-sm text-gray-600 leading-6">
+                                We collect data like your name, email, address, and phone number during account creation
+                                or purchase.
+                            </div>
+                        </div>
+                        <div
+                            class="relative h-[350px] w-full md:w-1/2 rounded-4xl bg-gray-200 shadow-gray-200 shadow-xl overflow-hidden">
+                            <div class="h-full w-full"
+                                style="background: url('https://source.unsplash.com/800x600/?data,privacy') center / cover">
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="space-y-6 text-sm leading-relaxed max-w-md mt-8">
-                        <div class="relative mt-4">
-                            <div class="text-xl font-semibold mt-6">Information We Collect</div>
-                            <div class="mt-2 text-sm text-gray-600 leading-6">
-                                We may collect personal information including your name, email address, contact details,
-                                and any other data you provide through forms or purchases.
+                    {{-- Section 2 --}}
+                    <div class="relative mt-8 flex flex-col md:flex-row-reverse items-center gap-6">
+                        <div class="relative w-full md:w-1/2 pl-0 md:pl-16">
+                            <div class="text-4xl font-bold mt-6">How We Use Your Data</div>
+                            <div class="mt-4 text-sm text-gray-600 leading-6">
+                                We use it to process orders, offer support, personalize your experience, and send
+                                updates or promotions.
                             </div>
                         </div>
-
-                        <div class="relative mt-4">
-                            <div class="text-xl font-semibold mt-6">How We Use Your Information</div>
-                            <div class="mt-2 text-sm text-gray-600 leading-6">
-                                Your information helps us deliver and improve our services, process transactions,
-                                respond to inquiries, and send updates or promotional content if you have opted in.
+                        <div
+                            class="relative h-[350px] w-full md:w-1/2 rounded-4xl bg-gray-200 shadow-gray-200 shadow-xl overflow-hidden">
+                            <div class="h-full w-full"
+                                style="background: url('https://source.unsplash.com/800x600/?business,analytics') center / cover">
                             </div>
                         </div>
+                    </div>
 
-                        <div class="relative mt-4">
-                            <div class="text-xl font-semibold mt-6">Cookies</div>
-                            <div class="mt-2 text-sm text-gray-600 leading-6">
-                                We use cookies to enhance user experience. These small files help us understand how you
-                                interact with the site and allow features like remembering your preferences.
+                    {{-- Section 3 --}}
+                    <div class="relative mt-8 flex flex-col md:flex-row items-center gap-6">
+                        <div class="relative w-full md:w-1/2 pr-0 md:pr-16">
+                            <div class="text-4xl font-bold mt-6">Data Protection</div>
+                            <div class="mt-4 text-sm text-gray-600 leading-6">
+                                We use advanced security measures to protect your personal data from unauthorized access
+                                or misuse.
                             </div>
                         </div>
-
-                        <div class="relative mt-4">
-                            <div class="text-xl font-semibold mt-6">Data Sharing</div>
-                            <div class="mt-2 text-sm text-gray-600 leading-6">
-                                We do not sell your personal data. Information may be shared with third-party service
-                                providers solely to assist in delivering our services under confidentiality agreements.
+                        <div
+                            class="relative h-[350px] w-full md:w-1/2 rounded-4xl bg-gray-200 shadow-gray-200 shadow-xl overflow-hidden">
+                            <div class="h-full w-full"
+                                style="background: url('https://source.unsplash.com/800x600/?security,lock') center / cover">
                             </div>
                         </div>
+                    </div>
 
-                        <div class="relative mt-4">
-                            <div class="text-xl font-semibold mt-6">Security</div>
-                            <div class="mt-2 text-sm text-gray-600 leading-6">
-                                We implement strict measures to protect your data from unauthorized access or
-                                disclosure. However, no digital method is 100% secure, and we cannot guarantee absolute
-                                safety.
+                    {{-- Section 4 --}}
+                    <div class="relative mt-8 flex flex-col md:flex-row-reverse items-center gap-6">
+                        <div class="relative w-full md:w-1/2 pl-0 md:pl-16">
+                            <div class="text-4xl font-bold mt-6">Your Rights</div>
+                            <div class="mt-4 text-sm text-gray-600 leading-6">
+                                You can view, update, or delete your personal data by reaching out to us anytime.
                             </div>
                         </div>
-
-                        <div class="relative mt-4">
-                            <div class="text-xl font-semibold mt-6">Your Rights</div>
-                            <div class="mt-2 text-sm text-gray-600 leading-6">
-                                You can request to view, edit, or delete your personal data at any time. Please contact
-                                our support team for any such requests.
+                        <div
+                            class="relative h-[350px] w-full md:w-1/2 rounded-4xl bg-gray-200 shadow-gray-200 shadow-xl overflow-hidden">
+                            <div class="h-full w-full"
+                                style="background: url('https://source.unsplash.com/800x600/?rights,freedom') center / cover">
                             </div>
                         </div>
+                    </div>
 
-                        <div class="relative mt-4">
-                            <div class="text-xl font-semibold mt-6">Changes to This Policy</div>
-                            <div class="mt-2 text-sm text-gray-600 leading-6">
-                                We may update this policy occasionally. Any changes will be posted on this page with an
-                                updated “Last Updated” date.
+                    {{-- Section 5 --}}
+                    <div class="relative mt-8 flex flex-col md:flex-row items-center gap-6">
+                        <div class="relative w-full md:w-1/2 pr-0 md:pr-16">
+                            <div class="text-4xl font-bold mt-6">Contact & Support</div>
+                            <div class="mt-4 text-sm text-gray-600 leading-6">
+                                Questions or concerns? Email us at <a href="mailto:support@figpic.com"
+                                    class="underline">support@figpic.com</a>.
                             </div>
                         </div>
-
-                        <div class="relative mt-4">
-                            <div class="text-xl font-semibold mt-6">Contact Us</div>
-                            <div class="mt-2 text-sm text-gray-600 leading-6">
-                                If you have any questions about this Privacy Policy, please email us at
-                                <a href="mailto:support@figpic.com"
-                                    class="text-blue-600 underline">support@figpic.com</a>.
+                        <div
+                            class="relative h-[350px] w-full md:w-1/2 rounded-4xl bg-gray-200 shadow-gray-200 shadow-xl overflow-hidden">
+                            <div class="h-full w-full"
+                                style="background: url('https://source.unsplash.com/800x600/?support,help') center / cover">
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
+
             {{-- footer --}}
             <x-footer />
         </div>

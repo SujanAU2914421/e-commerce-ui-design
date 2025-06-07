@@ -57,7 +57,11 @@
                                 <div class="relative flex justify-between">
                                     <div class="relative font-bold text-xl">Recent Orders</div>
                                     <div class="relative flex items-center gap-3 cursor-pointer group">
-                                        <div class="relative text-sm font-bold">Check All</div>
+                                        <div class="relative">
+                                            <a href="/account/order-history">
+                                                <div class="relative text-sm font-bold">Check All</div>
+                                            </a>
+                                        </div>
                                         <div
                                             class="relative group-hover:translate-x-1 transition-transform duration-300">
                                             <svg width="17" height="17" viewBox="0 0 24 24" fill="none"
