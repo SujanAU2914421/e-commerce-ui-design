@@ -61,7 +61,7 @@
                         </div>
                     </div>
                     <div class="relative w-full pb-8">
-                        <div class="relative font-bold pb-4">Burger</div>
+                        <div class="relative font-bold pb-4 text-xl">Burger</div>
                         <div
                             class="relative grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
                             {{-- Product Cards --}}
@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <div class="relative w-full pb-8">
-                        <div class="relative font-bold pb-4">Burger</div>
+                        <div class="relative font-bold pb-4 text-xl">Burger</div>
                         <div
                             class="relative grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
                             {{-- Product Cards --}}
@@ -81,7 +81,7 @@
                         </div>
                     </div>
                     <div class="relative w-full pb-8">
-                        <div class="relative font-bold pb-4">Burger</div>
+                        <div class="relative font-bold pb-4 text-xl">Burger</div>
                         <div
                             class="relative grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
                             {{-- Product Cards --}}
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                     <div class="relative w-full pb-8">
-                        <div class="relative font-bold pb-4">Burger</div>
+                        <div class="relative font-bold pb-4 text-xl">Burger</div>
                         <div
                             class="relative grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
                             {{-- Product Cards --}}

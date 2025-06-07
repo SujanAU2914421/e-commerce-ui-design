@@ -16,6 +16,7 @@
     <div class="relative space-x-8 flex items-center">
         {{-- Search Popup --}}
         <div x-show="show_search" @click.away="show_search = false" @keydown.escape.window="show_search = false"
+            :class="show_search ? 'hidden'"
             class="fixed top-0 left-0 z-70 h-screen w-screen bg-black/10 flex items-center justify-center">
             <div class="absolute h-full w-full" @click="show_search = false"></div>
             <div class="relative py-8 px-8 bg-white rounded-lg shadow-lg flex items-center justify-center">

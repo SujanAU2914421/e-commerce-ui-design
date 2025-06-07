@@ -14,9 +14,8 @@
                 <h4 class="text-md font-semibold mb-4 text-gray-800 dark:text-white">Company</h4>
                 <ul class="space-y-2">
                     <li><a href="/about" class="hover:text-yellow-500 transition">About us</a></li>
-                    <li><a href="/blog" class="hover:text-yellow-500 transition">Blog</a></li>
-                    <li><a href="/contact" class="hover:text-yellow-500 transition">Contact us</a></li>
-                    <li><a href="/career" class="hover:text-yellow-500 transition">Career</a></li>
+                    <li><a href="/#" class="hover:text-yellow-500 transition">Blog</a></li>
+                    <li><a href="/#" class="hover:text-yellow-500 transition">Career</a></li>
                 </ul>
             </div>
 
