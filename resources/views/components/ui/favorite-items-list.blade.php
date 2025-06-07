@@ -50,7 +50,7 @@ $favoriteItems = [
 
 <div x-data='{
         favorites: <?php echo json_encode($favoriteItems); ?>
-    }' class="p-4 space-y-4">
+    }' class="py-4 space-y-4">
 
     <!-- If favorite list is empty -->
     <template x-if="favorites.length === 0">
@@ -61,12 +61,12 @@ $favoriteItems = [
     <div x-show="favorites.length > 0" class="relative">
         <div class="flex justify-between items-center mb-4">
             <h2 class="text-lg font-semibold">Favorite Items</h2>
-            <button @click="favorites = []" class="text-sm text-red-500 hover:underline">Clear All</button>
+            <button @click="favorites = []" class="text-sm text-red-500 hover:underline cursor-pointer">Clear All</button>
         </div>
 
         <div class="space-y-4 pb-16">
             <template x-for="(item, index) in favorites" :key="index">
-                <div class="flex items-center gap-4 border-t border-gray-200 py-4">
+                <div class="flex items-center gap-4 border rounded-lg px-4 border-gray-200 py-4">
                     <div class="w-14 h-14 rounded-full overflow-hidden">
                         <img :src="item['image']" :alt="product['name']" class="object-cover w-full h-full">
                     </div>
@@ -90,7 +90,7 @@ $favoriteItems = [
                             </svg>
                         </button>
                         <button
-                            class="text-xs border cursor-pointer border-gray-800 px-3 py-1 rounded hover:bg-gray-800 hover:text-white transition">
+                            class="text-xs border cursor-pointer px-3 py-1 rounded-lg bg-gray-800 text-white transition">
                             Add to Cart
                         </button>
                     </div>

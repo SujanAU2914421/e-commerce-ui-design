@@ -65,7 +65,7 @@
     <form method="POST" action="/logout" x-ref="logoutForm" class="relative flex mt-16">
         @csrf
         <button type="button" @click="showLogoutModal = true"
-            class="relative h-10 px-8 flex items-center justify-center bg-red-500 text-white rounded-lg cursor-pointer">
+            class="relative h-10 px-8 flex items-center justify-center bg-red-500 text-gray-100 shadow font-bold rounded-lg cursor-pointer">
             Logout
         </button>
     </form>

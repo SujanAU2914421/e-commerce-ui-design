@@ -24,55 +24,92 @@
     <x-navbar />
     <div class="relative min-h-screen w-full overflow-y-auto text-gray-800" x-data="{ showCancelModal: false }">
         <main class="max-w-4xl mx-auto px-10 py-10 mb-16 flex-col space-y-8">
-            <h1 class="text-xl font-bold">Order Tracking</h1>
+            <div class="relative flex justify-between">
+                <h1 class="text-xl font-bold">Order Tracking</h1>
+                <div>
+                    @if ($order['status'] == 'cancelled')
+                        <button @click="showCancelModal = true"
+                            class="px-4 h-10 flex items-center justify-center bg-red-600 text-white rounded-lg text-sm hover:bg-red-700 cursor-pointer">Cancel
+                            Order</button>
+                    @endif
+                </div>
+            </div>
 
             <div class="relative flex gap-8 *:w-1/2">
-                {{-- Order Summary --}}
-                <div class="bg-white border border-gray-300 rounded-lg p-6">
-                    <div class="relative flex gap-3 items-center">
-                        <div class="relative">
-                            <!-- icon -->
+
+
+                {{-- Delivery Info --}}
+                <div class="relative flex w-full">
+                    <div class="bg-white border w-full border-gray-300 rounded-lg p-6 shadow-lg shadow-gray-200">
+                        <div class="relative flex gap-3 items-center">
+                            <div class="relative text-gray-600">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-map">
+                                    <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                                    <line x1="8" y1="2" x2="8" y2="18"></line>
+                                    <line x1="16" y1="6" x2="16" y2="22"></line>
+                                </svg>
+                            </div>
+                            <h2 class="font-semibold text-gray-700">Delivery Info</h2>
                         </div>
-                        <h2 class="font-semibold">Order Summary</h2>
-                    </div>
-                    <div class="relative mt-4 text-gray-800 text-normal font-semibold">
-                        <div class="relative flex gap-2 items-center">
-                            <span class="relative font-normal text-sm">Status:</span>
-                            <div class="relative">{{ ucfirst($order['status']) }}</div>
-                        </div>
-                        <div class="relative flex gap-2 items-center">
-                            <span class="relative font-normal text-sm">Estimated Delivery: </span>
-                            <div class="relative">
-                                {{ \Carbon\Carbon::parse($order['estimated_delivery'])->format('F j, Y') }}</div>
+                        <div class="relative mt-4 text-gray-800 text-normal font-semibold">
+                            <div class="relative flex *:w-1/2">
+                                <div class="relative">
+                                    <span class="relative font-normal text-xs">Address</span>
+                                    <div class="relative mt-1 text-sm">{{ $order['delivery']['address'] }}</div>
+                                </div>
+                                <div class="relative">
+                                    <span class="relative font-normal text-xs">City</span>
+                                    <div class="relative mt-1 text-sm">{{ $order['delivery']['city'] }}</div>
+                                </div>
+                            </div>
+                            <div class="relative flex *:w-1/2 mt-4">
+                                <div class="relative">
+                                    <span class="relative font-normal text-xs">Delivery Method</span>
+                                    <div class="relative mt-1 text-sm">{{ $order['delivery']['method'] }}</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                {{-- Delivery Info --}}
-                <div class="bg-white border border-gray-300 rounded-lg p-6">
-                    <div class="relative flex gap-3 items-center">
-                        <div class="relative">
-                            <!-- icon -->
+                {{-- Order Summary --}}
+                <div class="relative flex w-full">
+                    <div class="bg-white w-full border border-gray-300 rounded-lg p-6 shadow-lg shadow-gray-200">
+                        <div class="relative flex gap-3 items-center">
+                            <div class="relative text-gray-600">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-file-text">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+                            </div>
+                            <h2 class="font-semibold text-gray-700">Order Summary</h2>
                         </div>
-                        <h2 class="font-semibold">Delivery Info</h2>
-                    </div>
-                    <div class="relative mt-4 text-gray-800 text-normal font-semibold">
-                        <div class="relative flex gap-2 items-center">
-                            <span class="relative font-normal text-sm">Address:</span>
-                            <div class="relative">{{ $order['delivery']['address'] }}</div>
+                        <div class="relative mt-4 text-gray-800 text-normal font-semibold flex *:w-1/2">
+                            <div class="relative">
+                                <div class="relative font-normal text-xs">Ordered Date</div>
+                                <div class="relative mt-1 text-sm">{{ ucfirst($order['ordered_date']) }}</div>
+                            </div>
                         </div>
-                        <div class="relative flex gap-2 items-center">
-                            <span class="relative font-normal text-sm">City:</span>
-                            <div class="relative">{{ $order['delivery']['city'] }}</div>
-                        </div>
-                        <div class="relative flex gap-2 items-center">
-                            <span class="relative font-normal text-sm">Delivery Method:</span>
-                            <div class="relative">{{ $order['delivery']['method'] }}</div>
+                        <div class="relative mt-4 text-gray-800 text-normal font-semibold flex *:w-1/2">
+                            <div class="relative">
+                                <div class="relative font-normal text-xs">Status</div>
+                                <div class="relative mt-1 text-sm">{{ ucfirst($order['status']) }}</div>
+                            </div>
+                            <div class="relative">
+                                <div class="relative font-normal text-xs">Estimated Delivery </div>
+                                <div class="relative mt-1 text-sm">
+                                    {{ \Carbon\Carbon::parse($order['estimated_delivery'])->format('F j, Y') }}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
             {{-- Items Purchased --}}
             <div class="bg-white p-6">
                 <div class="relative flex gap-3 items-center">
@@ -134,9 +171,11 @@
                 <a href="/products"
                     class="px-4 h-10 flex items-center justify-center border border-gray-300 rounded-lg text-sm hover:bg-gray-100">Continue
                     Shopping</a>
-                <button @click="showCancelModal = true"
-                    class="px-4 h-10 flex items-center justify-center bg-red-600 text-white rounded-lg text-sm hover:bg-red-700 cursor-pointer">Cancel
-                    Order</button>
+                @if ($order['status'] == 'cancelled')
+                    <button @click="showCancelModal = true"
+                        class="px-4 h-10 flex items-center justify-center bg-red-600 text-white rounded-lg text-sm hover:bg-red-700 cursor-pointer">Cancel
+                        Order</button>
+                @endif
             </div>
         </main>
 

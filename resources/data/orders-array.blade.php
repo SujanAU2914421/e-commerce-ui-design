@@ -4,6 +4,7 @@ return [
     [
         'id' => 1,
         'status' => 'Cancelled',
+        'ordered_date' => 'June 4, 2025',
         'estimated_delivery' => 'June 9, 2025',
         'delivery' => [
             'address' => 'Hattiban, Lalitpur',
@@ -37,6 +38,7 @@ return [
     [
         'id' => 2,
         'status' => 'Delivered',
+        'ordered_date' => 'June 4, 2025',
         'estimated_delivery' => 'May 28, 2025',
         'delivery' => [
             'address' => 'Jawalakhel, Lalitpur',
@@ -63,6 +65,7 @@ return [
     [
         'id' => 3,
         'status' => 'Shipped',
+        'ordered_date' => 'June 4, 2025',
         'estimated_delivery' => 'June 12, 2025',
         'delivery' => [
             'address' => 'New Road, Pokhara',
@@ -96,6 +99,7 @@ return [
     [
         'id' => 4,
         'status' => 'Processing',
+        'ordered_date' => 'June 4, 2025',
         'estimated_delivery' => 'June 15, 2025',
         'delivery' => [
             'address' => 'Itahari-5, Sunsari',

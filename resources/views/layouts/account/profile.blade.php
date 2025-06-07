@@ -32,7 +32,7 @@
                     </div>
 
                     {{-- Main Content --}}
-                    <div class="relative w-full pt-8 px-4 md:px-6 lg:px-8">
+                    <div class="flex-1 pt-8 pl-8">
                         <div class="relative">
 
                             {{-- Personal Information --}}

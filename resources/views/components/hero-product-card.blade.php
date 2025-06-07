@@ -21,10 +21,10 @@
     </div>
 
     <!-- Content -->
-    <div class="p-4 space-y-2">
-        <h3 class="text-lg font-semibold text-gray-800">{{ $product['name'] }}</h3>
+    <div class="py-4 px-6 space-y-2">
+        <h3 class="font-semibold text-gray-800">{{ $product['name'] }}</h3>
         <p class="text-sm text-gray-500">{{ $product['description'] }}</p>
-        <div class="text-xl font-bold text-gray-800">
+        <div class="text-normal font-bold text-gray-800">
             <span class="text-gray-600 text-sm">Rs.</span> {{ $product['price'] }} / <span
                 class="text-sm">{{ $product['unit'] }}</span>
         </div>

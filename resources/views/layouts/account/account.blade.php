@@ -40,13 +40,15 @@
                         {{-- Example Compartment Structure --}}
                         <div class="flex flex-row gap-6">
                             <!-- Card 1 -->
-                            <div class="px-8 py-8 w-56 shadow rounded-xl text-white bg-green-600">
-                                <div class="text-md">Total Orders</div>
+                            <div
+                                class="px-8 py-8 w-56 shadow-lg rounded-xl text-white bg-gradient-to-tr from-green-600 to-green-700">
+                                <div class="text-md font-bold text-green-100">Total Orders</div>
                                 <div class="text-3xl mt-3 font-extrabold">12</div>
                             </div>
                             <!-- Card 2 -->
-                            <div class="px-8 py-8 w-64 shadow rounded-xl text-white bg-orange-500">
-                                <div class="text-md">Wallet Balance</div>
+                            <div
+                                class="px-8 py-8 w-64 shadow-lg rounded-xl text-white bg-gradient-to-tr from-orange-600 to-orange-700">
+                                <div class="text-md font-bold text-orange-100">Wallet Balance</div>
                                 <div class="text-3xl mt-3 font-extrabold"><span class="text-xl">Rs.</span> 5,250</div>
                             </div>
                         </div>

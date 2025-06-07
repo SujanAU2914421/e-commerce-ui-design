@@ -30,6 +30,34 @@ Route::get('/checkout', function () {
     return view('layouts.order.checkout');
 });
 
+Route::get('/cart', function () {
+    return view('layouts.cart');
+});
+
+Route::get('/contact-us', function () {
+    return view('layouts.contact-us');
+});
+
+Route::get('/terms', function () {
+    return view('layouts.terms');
+});
+
+Route::get('/return-policy', function () {
+    return view('layouts.return-policy');
+});
+
+Route::get('/faq', function () {
+    return view('layouts.faq');
+});
+
+Route::get('/privacy-policy', function () {
+    return view('layouts.privacy-policy');
+});
+
+Route::get('/about-us', function () {
+    return view('layouts.about-us');
+});
+
 Route::get('/order/{id}', function ($id) {
     $orders = include resource_path('data/orders-array.blade.php');
     $order = collect($orders)->firstWhere('id', $id);

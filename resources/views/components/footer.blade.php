@@ -25,7 +25,7 @@
                 <h4 class="text-md font-semibold mb-4 text-gray-800 dark:text-white">Customer Service</h4>
                 <ul class="space-y-2">
                     <li><a href="/account" class="hover:text-yellow-500 transition">My Account</a></li>
-                    <li><a href="/orders" class="hover:text-yellow-500 transition">My Orders</a></li>
+                    <li><a href="/account/order-history" class="hover:text-yellow-500 transition">My Orders</a></li>
                     <li><a href="/contact" class="hover:text-yellow-500 transition">Contact us</a></li>
                     <li><a href="/faq" class="hover:text-yellow-500 transition">FAQ</a></li>
                 </ul>

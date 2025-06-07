@@ -30,9 +30,26 @@
         <div class="relative flex-grow w-full">
             <div class="relative w-full xl:px-16 lg:px-8 md:px-4 px-2 mb-16">
                 <div class="relative h-auto w-full pt-8">
-                    <div class="relative h-[calc(100vh-14rem)] w-full bg-gray-200 rounded-xl"></div>
+                    <div class="relative h-96 w-full flex items-center text-center">
+                        <div class="absolute h-full w-full bg-gray-200 rounded-xl"></div>
+                        <div class="relative w-full">
+                            <div class="relative text-7xl font-extrabold font-mono leading-[6rem]"><span
+                                    class="text-gray-800">EAt</span> <span class="text-gray-800">WeLl</span><br />
+                                <span class="text-orange-600">ShIT</span> <span class="text-orange-600">wELl</span>
+                            </div>
+                            <div class="relative text-xl text-gray-700">Trusted, Fresh, Healthy</div>
+                            <div class="relative flex mt-8 justify-center">
+                                <a href="/products">
+                                    <div
+                                        class="relative h-12 px-16 bg-gray-800 text-white rounded-lg shadow flex items-center cursor-pointer justify-center">
+                                        Start shopping?
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     {{-- categories --}}
-                    <div class="relative w-full pt-8 pb-8">
+                    <div class="relative w-full mt-16 mb-8">
                         <div class="relative text-xl font-bold pb-4">Categories</div>
                         <div x-data="{ categories: ['Pizza', 'Burgers', 'Pasta', 'Drinks', 'Desserts', 'Salads', 'Rice Bowls', 'Wraps'] }" class="relative flex gap-4 flex-wrap">
                             <template x-for="category in categories" :key="category">
@@ -42,8 +59,6 @@
                                 </div>
                             </template>
                         </div>
-
-
                     </div>
                     <div class="relative w-full pb-8">
                         <div class="relative font-bold pb-4">Burger</div>

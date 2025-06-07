@@ -38,7 +38,7 @@
 
                     <!-- Main Content -->
                     <div class="relative flex-1 pt-8 px-16">
-                        <h1 class="text-2xl font-bold mb-6">Your Orders</h1>
+                        <h1 class="text-xl font-bold mb-6 text-gray-600">My Orders</h1>
 
                         <div class="overflow-x-auto bg-white">
                             <table class="min-w-full divide-y divide-gray-200">

@@ -53,7 +53,7 @@
                         {{-- product details --}}
                         <div class="relative w-1/2 min-h-screen">
                             <div
-                                class="relative h-[calc(100vh-8rem)] w-full rounded-xl border-gray-800 border overflow-hidden">
+                                class="relative h-[calc(100vh-8rem)] w-full rounded-xl border-gray-300 border overflow-hidden">
                                 <div class="relative h-full w-full"
                                     style="background: url({{ $product['image'] }}) center / cover">
                                 </div>

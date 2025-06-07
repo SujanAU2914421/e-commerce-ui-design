@@ -32,7 +32,12 @@
             <div class="relative flex-grow w-full">
                 <div class="relative w-full xl:px-16 lg:px-8 md:px-4 px-2 mb-16">
                     <div class="relative h-auto w-full pt-8 flex">
-                        <div class="relative h-96 w-72">
+                        <div class="relative w-72">
+                            <div class="relative flex mb-4">
+                                <div
+                                    class="relative px-8 h-10 flex items-center justify-center text-sm rounded-lg font-bold cursor-pointer bg-red-600 text-white">
+                                    Reset Filters</div>
+                            </div>
                             <div x-data="{ categories: ['Fruits', 'Vegetables', 'Grains', 'Meat', 'Dairy'] }" class="relative">
                                 <h2 class="text-lg font-semibold mb-2">Categories</h2>
                                 <ul class="space-y-2">
@@ -66,7 +71,6 @@
                         </div>
                         <div class="relative h-auto w-full">
                             <div class="relative h-auto w-full">
-
                                 <div
                                     class="relative grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-4">
                                     {{-- Product Cards --}}
