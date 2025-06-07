@@ -50,26 +50,29 @@
             <div class="relative flex-grow w-full">
                 <div class="relative w-full xl:px-16 lg:px-8 md:px-4 px-2 mb-16 min-h-screen pt-8">
                     <div class="relative h-auto w-full flex">
-                        <div class="relative w-1/2 min-h-screen">
+                        <div class="relative w-1/2 min-h-screen" x-data="{ selectedImage: '{{ $product['image'] }}' }">
+                            <!-- Big Main Image -->
                             <div
                                 class="relative h-[calc(100vh-8rem)] w-full rounded-xl border-gray-300 border overflow-hidden">
                                 <div class="relative h-full w-full"
-                                    style="background: url('{{ $product['image'] }}') center / cover">
+                                    :style="'background: url(' + selectedImage + ') center / cover'">
                                 </div>
                             </div>
 
+                            <!-- Thumbnails -->
                             <div class="relative mt-5 flex gap-8 flex-wrap">
                                 @if (!empty($product['images']))
                                     @foreach ($product['images'] as $image)
-                                        <div
-                                            class="relative h-32 w-32 rounded-md bg-gray-200 border-gray-800 border overflow-hidden">
-                                            <img src="{{ $image }}" alt="Product Image"
+                                        <div class="relative h-32 w-32 rounded-md bg-gray-200 border-gray-800 border overflow-hidden cursor-pointer"
+                                            @click="selectedImage = '{{ $image }}'">
+                                            <img src="{{ $image }}" alt="Thumbnail"
                                                 class="h-full w-full object-cover" />
                                         </div>
                                     @endforeach
                                 @endif
                             </div>
                         </div>
+
 
                         <div class="relative w-1/2 xl:pl-16 lg:pl-8 md:pl-4 px-2">
                             <div class="relative">
